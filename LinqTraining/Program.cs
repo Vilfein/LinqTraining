@@ -19,6 +19,15 @@
         static void Main(string[] args)
         {
 
+
+            var Nezletilí = (from q in Lidi
+                             where q.Zletily == false
+                             select q).ToList();
+
+            foreach (var u in Nezletilí)
+                Console.WriteLine(u);
+
+
         }
 
     }
